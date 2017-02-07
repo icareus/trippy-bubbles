@@ -33,7 +33,7 @@ const vecDiff = (v1, v2) => ({
     y: v2.y - v1.y
 })
 const vecSymm = (v, ref = getCenter()) => vecAdd(ref, vecDiff(v, ref))
-const vecSquareDist = (v1, v2) => (v2.x - v1.x)**2 + (v2.y - v1.y)**2
+const vecSquareDist = (v1, v2) => Math.pow(v2.x - v1.x, 2) + Math.pow(v2.y - v1.y, 2)
 const vecDist = (v1, v2) => Math.sqrt(vecSquareDist(v1, v2))
 const distTo = v1 => v2 => vecDist(v1, v2)
 
